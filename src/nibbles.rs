@@ -805,7 +805,7 @@ impl Nibbles {
     #[inline]
     pub const fn len(&self) -> usize {
         let len = self.len;
-        debug_assert!(len <= NIBBLES);
+        assert!(len <= NIBBLES);
         unsafe { core::hint::assert_unchecked(len <= NIBBLES) };
         len
     }
